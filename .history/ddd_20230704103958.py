@@ -54,7 +54,7 @@ response = requests.get(url)
 soup = BeautifulSoup(response.text, 'html.parser')
 
 # Находим все ссылки на языки в блоке "Языки"
-languages = soup.find('div', class_='central-featured-lang lang5').find_('a')
+languages = soup.find('div', class_='central-featured-lang lang5').find('a')
 
 # Перебираем найденные ссылки
 for language in languages:
